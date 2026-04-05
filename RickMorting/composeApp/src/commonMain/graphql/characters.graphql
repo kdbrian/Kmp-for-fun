@@ -1,0 +1,31 @@
+query AllCharacters {
+    characters{
+        results{
+            name
+            image
+            id
+            gender
+            status
+        }
+    }
+}
+
+query Locations {
+    locations{
+        results{
+            name
+            dimension
+            id
+        }
+    }
+}
+query Episodes {
+    episodes {
+        results {
+            name
+            air_date
+            created
+            id
+        }
+    }
+}
