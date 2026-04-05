@@ -1,28 +1,39 @@
-This is a Kotlin Multiplatform project targeting Desktop (JVM).
+This is a Kotlin Multiplatform project targeting Desktop (JVM). It consumes the Rick and Morty Api; perfect choice due to its support for GraphQl + Rest. Code is arranged, in a clean architecture that clearly separates concerns between the different layers of the App.
 
 * [/composeApp](./composeApp/src) is for code that will be shared across your Compose Multiplatform applications.
   It contains several subfolders:
     - [commonMain](./composeApp/src/commonMain/kotlin) is for code that’s common for all targets.
+ 
+* Targets : Desktop, Web(incomplete) & Android
 
 ## F* Around
-- Logging - Used to timber on android does't work on Kmp.
 - Networking - Ktor does it best
-- UI - Jetpack compose + Compose Multiplatform
-- Resources - used to R. extension on android
-- Image loading - coil still works fine
-- IDE - Tried intellij first. Tooling, live templates, plus other dev perks to speed up work not supported.
+- Image loading - coil okhttp failure
+- DI - Koin was a saviour
+- Apollo GraphQl - used on Android but no fuss implementing for KMM
 
 ## Find out
-- [Napier](https://github.com/aakira/napier) works fine for Kmp logging.
-- Android Studio - Heavy but does the work fine, especially previews and templates.
-- [gradle-buildconfig-plugin]("https://github.com/gmazzo/gradle-buildconfig-plugin") Replacement for secrets, IDK of any tricks but everytime I rerun the project I ended up( clean, generate BuildConfig class, run) Tideous but saves my secrets from exposure.
-- Hot ♨ reload - learnt about it later, still heavy and not fast as in Flutter.
-- Importing resources is easier just adding them to the resources dir in commonMain.
+- Even though coil would work fine on desktop and Jvm, it required a seperate network dependency for the web. Ended up using coil Ktor and Http engines since Okhttp is just for android
+- Koin Dependency injection was seamless at common main but setting up the dependencies was initially tricky, used claude help.
 
 # ✌ Cts
-- For this project I focused on Kmp for desktop apps but future projects am considering a Android/ Web alternative.
-- I can't say I can't build for Ios due to lack of a Mac. But at this pace, am assured I don't need one to deliver Ios apps.
-- Still getting to know Kmp.
+- For this project I focused on Kmp for desktop, Android and web. I have issues launching the web target but am steadily improving my Kmp knowledge.
+- I utilized GraphQl since am OK with Rest. Pun intended
+
+## Project Outline
+### Targets
+  - Android [X]
+  - Web []
+  - Desktop [X]
+### Stack
+  - Compose Multiplatform(Source+UI)
+  - Kotlin
+  - Clean Architecture
+### Libraries
+  - Coil - Image Loading
+  - Ktor - Network
+  - Apollo GraphQl - Api client
+  - Koin - Dependency Injection
 
 ## I clap 👏 for me and urge to me to Keep the spirit alive
 
