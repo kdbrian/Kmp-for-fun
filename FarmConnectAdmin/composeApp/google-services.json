@@ -1,0 +1,135 @@
+{
+  "project_info": {
+    "project_number": "204217673807",
+    "firebase_url": "https://kenol-marketplace-default-rtdb.firebaseio.com",
+    "project_id": "kenol-marketplace",
+    "storage_bucket": "kenol-marketplace.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:204217673807:android:05cd2b0e26323e80c3e23a",
+        "android_client_info": {
+          "package_name": "com.farm.connect.kenol"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "204217673807-n08ga9u07nc7kbe9le5p97ag29rj99vq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBI6RAA8tPyny8E9zsgDGsavZeepH1Xd-c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "204217673807-n08ga9u07nc7kbe9le5p97ag29rj99vq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:204217673807:android:14c92a95af564ec7c3e23a",
+        "android_client_info": {
+          "package_name": "com.farmconnect.admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "204217673807-n08ga9u07nc7kbe9le5p97ag29rj99vq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBI6RAA8tPyny8E9zsgDGsavZeepH1Xd-c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "204217673807-n08ga9u07nc7kbe9le5p97ag29rj99vq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:204217673807:android:b0cbe2ca87585cbac3e23a",
+        "android_client_info": {
+          "package_name": "com.farmconnect.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "204217673807-n08ga9u07nc7kbe9le5p97ag29rj99vq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBI6RAA8tPyny8E9zsgDGsavZeepH1Xd-c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "204217673807-n08ga9u07nc7kbe9le5p97ag29rj99vq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:204217673807:android:77bde927bf258fdfc3e23a",
+        "android_client_info": {
+          "package_name": "com.farmconnect.kenol"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "204217673807-v2sggg6buh6ilhcdq5pu6r2u97ssmda2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.farmconnect.kenol",
+            "certificate_hash": "94e859e8a6dec66392517f3a9f3c835ebe2835ac"
+          }
+        },
+        {
+          "client_id": "204217673807-n08ga9u07nc7kbe9le5p97ag29rj99vq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBI6RAA8tPyny8E9zsgDGsavZeepH1Xd-c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "204217673807-n08ga9u07nc7kbe9le5p97ag29rj99vq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
