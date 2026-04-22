@@ -1,40 +1,70 @@
 package com.kdbrian.nursa
 
-import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.safeContentPadding
-import androidx.compose.material3.Button
+import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Text
-import androidx.compose.runtime.*
-import androidx.compose.ui.Alignment
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.draw.blur
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import com.kdbrian.nursa.config.util.Resource
 import com.kdbrian.nursa.features.newsapp.NewsViewModel
-import com.kdbrian.nursa.features.newsapp.presentation.ui.screens.NewsSearch
-import org.jetbrains.compose.resources.painterResource
-
-import nursa.composeapp.generated.resources.Res
-import nursa.composeapp.generated.resources.compose_multiplatform
+import com.kdbrian.nursa.features.newsapp.supportedCountries
+import com.kdbrian.nursa.features.onboard.ui.screens.NewsOnboarding
+import com.kdbrian.nursa.features.onboard.ui.screens.OnboardingScreen
+import com.kdbrian.nursa.features.onboard.ui.theme.LocalOnPrimaryColor
+import com.kdbrian.nursa.features.onboard.ui.theme.LocalPrimaryColor
+import com.kdbrian.nursa.features.onboard.ui.theme.onPrimaryColor
+import com.kdbrian.nursa.features.onboard.ui.theme.primaryColor
 import org.koin.compose.viewmodel.koinViewModel
 
 @Composable
 @Preview
 fun App() {
 
-    val newsViewModel : NewsViewModel  = koinViewModel()
-
-    val newsResource = newsViewModel.newsResource.collectAsState()
 
     MaterialTheme {
-        NewsSearch(
-            newsResource = newsResource.value,
-            query = newsViewModel.query.collectAsState().value,
-            onQueryChange = newsViewModel::updateQuery,
-        )
+        CompositionLocalProvider(
+            LocalPrimaryColor provides primaryColor,
+            LocalOnPrimaryColor provides onPrimaryColor
+        ) {
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .background(Color.White)
+            ) {
+
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .background(
+                            brush = Brush.radialGradient(
+                                colors = listOf(
+                                    Color(0xFFE08DAC),
+                                    Color(0xFFE08DAC).copy(.6f),
+                                    Color(0xFFE08DAC).copy(.2f),
+                                )
+                            )
+                        )
+                )
+
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .background(Color.White.copy(.45f))
+                        .blur(12.dp)
+                        .alpha(.3f)
+                )
+                OnboardingScreen()
+            }
+        }
     }
 }

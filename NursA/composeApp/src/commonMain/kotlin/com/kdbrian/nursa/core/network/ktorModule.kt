@@ -15,13 +15,12 @@ fun ktorModule() = module {
             install(ContentNegotiation) {
                 json(
                     json = kotlinx.serialization.json.Json {
-                        prettyPrint = true
+//                        prettyPrint = true
 //                        isLenient = true
                         ignoreUnknownKeys = true
                     }
                 )
             }
-
 
             install(Logging) {
                 object : io.ktor.client.plugins.logging.Logger {
