@@ -24,7 +24,7 @@ class NewsRepoImpl(
 //        latestTime: String,
         categories: List<String>
     ): Result<NewsResponse> = safeApiCall {
-        client.get(Urls.newsBaseUrl.plus("search-news")) {
+        val response = client.get(Urls.newsBaseUrl.plus("search-news")) {
             parameter("text", text)
             parameter("source-country", sourceCountry)
 //            parameter("latest-publish-date", latestTime)
@@ -33,7 +33,9 @@ class NewsRepoImpl(
             parameter("api-key", BuildConfig.newsApiKey)
             parameter("language", language)
             parameter("number", 70)
-        }.body()
+        }.bodyAsText()
+        Napier.d("Response: $response")
+        Json.decodeFromString(response)
 
     }
 

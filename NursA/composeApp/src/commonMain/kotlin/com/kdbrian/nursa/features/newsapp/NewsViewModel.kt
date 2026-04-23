@@ -58,9 +58,8 @@ class NewsViewModel(
 
             _query
                 .filter { it.isNotEmpty() && it.length in 4..35 }
-                .drop(1)
-                .debounce(1_800)
-//                .distinctUntilChanged()
+//                .drop(1)
+                .debounce(1_200)
                 .onEach { qVal ->
 
                     Napier.d("Query: $qVal")
@@ -82,7 +81,7 @@ class NewsViewModel(
                 _categories
             ) { sourceCountry, latestTime, categories ->
                 Triple(sourceCountry, latestTime, categories)
-            }.distinctUntilChanged()
+            }.debounce(800)
                 .onEach { (sourceCountry, latestTime, categories) ->
                     fetchTopNewsUseCase.invoke(
                         date = latestTime,
